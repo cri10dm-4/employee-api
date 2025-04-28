@@ -12,7 +12,6 @@ import connectToDatabase from './db/db.js'
 
 connectToDatabase() 
 const app = express() 
-const app = express()
 app.use(cors({
   origin: "https://employee-frontend-henna.vercel.app/",
   credentials: true
