@@ -12,7 +12,11 @@ import connectToDatabase from './db/db.js'
 
 connectToDatabase() 
 const app = express() 
-app.use(cors())
+const app = express()
+app.use(cors({
+  origin: "https://employee-frontend-henna.vercel.app/",
+  credentials: true
+}))
 app.use(express.json())
 app.use(express.static('public/uploads'))
 app.use('/api/auth', authRouter)
